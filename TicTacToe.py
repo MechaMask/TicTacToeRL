@@ -147,7 +147,7 @@ def start(player1,player2,introComments):
     game = Game(player1,player2)
     print(game)
     if(introComments != ""):
-        comment = introComments+"\n"        
+        comment = introComments+"\n"
         print(introComments)
     print(game.gameState())
     return game
@@ -158,76 +158,13 @@ def startGame(username1,username2,introComments):
     game = Game(player1,player2)
     print(game)
     if(introComments != ""):
-        comment = introComments+"\n"        
+        comment = introComments+"\n"
         print(introComments)
     print(game.gameState())
-    return game           
+    return game
 def move(game,input,x,y,comment):
     game.playTurn(input,x,y)
     print(game.gameState())
     if(comment != ""):
-        comment = comment+"\n"        
+        comment = comment+"\n"
         print(comment)
-
-p1="MechaMask"
-p2="Dr.Wimz"
-'''
-p1 = Player("MechaMask","x")
-p2 = Player("Dr.Wimz","o")
-game = Game(p1,p2)
-print(game)
-print("A game between {player1} and {player2}.\nLet's get Reaaaaddyyy!!!\n3\n2\n1\nGOOOOOOOOOOO!!!\n".format(player1 =str(p1) , player2= str(p2)))
-print(game.gameState())
-'''
-game = startGame(p1,p2,"A game between {player1} and {player2}.\nLet's get Reaaaaddyyy!!!\n3\n2\n1\nGOOOOOOOOOOO!!!".format(player1 =str(p1), player2= str(p2)))
-move(game,"x",1,1,"")
-move(game,"o",2,1,"")
-move(game,"x",1,2,"oooooooohh!")
-move(game,"o",1,0,"prettyy intense!")
-move(game,"x",0,2,"OMG THIS IS THE END\n{player2} has no choice".format(player2= str(p2)))
-move(game,"o",2,0,"{player2} makes a play but it's damned either way".format(player2= str(p2)))
-move(game,"x",2,2,"WOOOOOOOOOOWWW!!\nUNBELIEVEABLE\n{player1} got that win".format(player1 =str(p1)))
-move(game,"o",0,0,"")
-move(game,"o",0,1,"")
-'''
-game.setBoard("o",0,1)
-game.setBoard("o",1,1)
-game.setBoard("o",2,1)
-print("first column winning test")
-print(game.gameState())
-print(game.columnWon())
-game.reset()
-game.setBoard("o",2,0)
-game.setBoard("o",2,1)
-game.setBoard("o",2,2)
-print("first row winning test")
-print(game.gameState())
-print(game.rowWon())
-game.reset()
-game.setBoard("x",0,0)
-game.setBoard("x",1,1)
-game.setBoard("x",2,2)
-print("diagonal winning test 1")
-print(game.gameState())
-print(game.diagonalWon())
-game.reset()
-game.setBoard("x",0,2)
-game.setBoard("x",1,1)
-game.setBoard("x",2,0)
-print("diagonal winning test 2")
-print(game.gameState())
-print(game.diagonalWon())
-game.reset()
-game.setBoard("o",0,0)
-game.setBoard("x",0,1)
-game.setBoard("o",0,2)
-game.setBoard("o",1,0)
-game.setBoard("x",1,1)
-game.setBoard("x",1,2)
-game.setBoard("x",2,0)
-game.setBoard("o",2,1)
-game.setBoard("x",2,2)
-print("game is draw")
-print(not game.rowWon())
-print(game.gameState())
-'''
